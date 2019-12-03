@@ -8,6 +8,8 @@ const path = require('path')
 
 const movieRoutes = require('./api/routes/movies');
 
+// mongoose.Promise = global.Promise;
+
 //connecting to database
 mongoose.connect(
     'mongodb+srv://test:'+ 
@@ -15,7 +17,9 @@ mongoose.connect(
     '@cluster0-puu21.mongodb.net/test?retryWrites=true&w=majority',{
     useNewUrlParser: true,
     useUnifiedTopology: true
-});
+}, () => {
+    console.log("MongoDb connected");
+}).catch(err => console.log(err));
 
 //logging the incoming requests
 const accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' })
