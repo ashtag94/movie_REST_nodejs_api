@@ -12,9 +12,7 @@ const movieRoutes = require('./api/routes/movies');
 
 //connecting to database
 mongoose.connect(
-    'mongodb+srv://test:'+ 
-    process.env.MONGO_ATLAS_PW +
-    '@cluster0-puu21.mongodb.net/test?retryWrites=true&w=majority',{
+    'mongodb+srv://test:test@cluster0-puu21.mongodb.net/test?retryWrites=true&w=majority',{
     useNewUrlParser: true,
     useUnifiedTopology: true
 }, () => {
