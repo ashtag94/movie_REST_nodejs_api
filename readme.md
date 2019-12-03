@@ -31,8 +31,8 @@ Patch request should be sent by body containg a list of objects defining the pro
 
 [
     {
-        "propName": "<name of property you want to change>",
-        "value": "<new value of the property>"
+        "propName": "{name of property you want to change}",
+        "value": "{new value of the property}"
     }
 ]
 
